@@ -21,23 +21,20 @@
     <ClCompile Include="gl_base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectGL.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ChronoClock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OpenGLWindow.cpp">
+    <ClCompile Include="gl_Shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gl_Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ObjectGL.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="render.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -47,7 +44,10 @@
     <ClInclude Include="ChronoClock.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OpenGLWindow.hpp">
+    <ClInclude Include="gl_Shape.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gl_Window.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

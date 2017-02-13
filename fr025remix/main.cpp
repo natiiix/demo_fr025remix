@@ -1,20 +1,24 @@
-#include "OpenGLWindow.hpp"
-
-OpenGLWindow * win;
+#include "gl_Window.hpp"
 
 int main(void)
 {
-	const char * winTitle = "test window title";
-	const bool winFullscreen = true;
-	const int winWidth = 640;
-	const int winHeight = 480;
 	const char * musicPath = "song.wav";
+	const char * winTitle = "fr-025 remix";
+	bool winFullscreen = false;
+	int winWidth = 1280;
+	int winHeight = 720;
 
-	win = new OpenGLWindow(winTitle, winFullscreen, winWidth, winHeight);
-	if (win->LoadMusic(musicPath))
-	{
-		win->Run();
-	}
+	// Ask the user for what resolution does he desire and
+	// whether he wants to run the OpenGLWindow in fullscreen
+#ifndef _DEBUG
+	gl::Window::askForResolution(winFullscreen, winWidth, winHeight);
+#endif // !_DEBUG
+
+	gl::Window &winInstance = gl::Window::getInstance();
+
+	winInstance.Setup(winTitle, winFullscreen, winWidth, winHeight);
+	if (winInstance.LoadMusic(musicPath))
+		winInstance.Run();
 
 	// This return is supposed to be unreachable.
 	// Running instance of OpenGLWindow runs in a infinite loop.
@@ -22,4 +26,3 @@ int main(void)
 	// Reaching this return statement indicates a problem with the OpenGLWindow loop.
 	return -1;
 }
-

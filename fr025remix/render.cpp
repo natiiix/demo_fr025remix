@@ -1,34 +1,24 @@
 #include "render.hpp"
-#include "ObjectGL.hpp"
+#include "gl_Shape.hpp"
 
-ObjectGL * objects[OBJLEN];
-double timePassed = 0;
+#include <vector>
 
-void render(const double deltaTime)
+namespace gl
 {
-	timePassed += deltaTime;
+	std::vector<Shape *> glObjects;
 
-	if (timePassed == 0)
+	void render(ChronoClock & clock)
 	{
-		for (int i = 0; i < OBJLEN; i++)
+		float deltaTime = (float)clock.getDeltaTime();
+		double totalTime = clock.getTotalTime();
+
+		if (totalTime == 0.0)
 		{
-			float _x = ((i % 8) - 4) * OBJX + OBJX / 2;
-			float _y = (i / 8) * (OBJY / (OBJLEN / 8)) - OBJYHALF;
-			objects[i] = new CubeGL(_x, _y, -OBJZ, 0.02f, 0.01f, 0.02f);
+			glObjects.push_back(new Cube(0.0f, 0.0f, -5.0f, 2.0f, 2.0f, 2.0f));
+			glObjects.back()->SetColor(VERTEX_LEFT_BOTTOM_FRONT, 1.0f, 0.0f, 0.0f);
 		}
-	}
 
-	for (int i = 0; i < OBJLEN; i++)
-	{
-		objects[i]->Move(0.0f, 1.0f * -(float)deltaTime, 0.0f);
-		while (objects[i]->GetY() < -OBJYHALF)
-		{
-			objects[i]->Move(0.0f, OBJY, 0.0f);
-		}
-	}
-
-	for (int i = 0; i < OBJLEN; i++)
-	{
-		objects[i]->Draw();
+		glObjects.back()->Draw();
+		glObjects.back()->Rotate(deltaTime * 360.0f, 0.0f, 0.0f);
 	}
 }

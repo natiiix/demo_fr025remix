@@ -121,15 +121,15 @@
     <ClCompile Include="ChronoClock.cpp" />
     <ClCompile Include="gl_base.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ObjectGL.cpp" />
-    <ClCompile Include="OpenGLWindow.cpp" />
+    <ClCompile Include="gl_Shape.cpp" />
+    <ClCompile Include="gl_Window.cpp" />
     <ClCompile Include="render.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChronoClock.hpp" />
     <ClInclude Include="gl_base.hpp" />
-    <ClInclude Include="ObjectGL.hpp" />
-    <ClInclude Include="OpenGLWindow.hpp" />
+    <ClInclude Include="gl_Shape.hpp" />
+    <ClInclude Include="gl_Window.hpp" />
     <ClInclude Include="render.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

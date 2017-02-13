@@ -1,16 +1,14 @@
 #pragma once
 
-#ifndef CHRONOCLOCK_HPP
-#define CHRONOCLOCK_HPP
-
 #include <chrono>
 
 class ChronoClock
 {
 public:
-	double getDeltaTime();
+	double getDeltaTime(void);
+	double getTotalTime(void) const;
 private:
+	double totalTime;
+	std::chrono::time_point<std::chrono::steady_clock> firstLoop;
 	std::chrono::time_point<std::chrono::steady_clock> prevLoop;
 };
-
-#endif // !CHRONOCLOCK_HPP
