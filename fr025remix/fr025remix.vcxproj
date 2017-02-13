@@ -119,7 +119,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ChronoClock.cpp" />
+    <ClCompile Include="gl_Animation.cpp" />
     <ClCompile Include="gl_base.cpp" />
+    <ClCompile Include="gl_Duplicator.cpp" />
+    <ClCompile Include="gl_Scene.cpp" />
+    <ClCompile Include="gl_ShapeGroup.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="gl_Shape.cpp" />
     <ClCompile Include="gl_Window.cpp" />
@@ -127,8 +131,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChronoClock.hpp" />
+    <ClInclude Include="gl_Animation.hpp" />
     <ClInclude Include="gl_base.hpp" />
+    <ClInclude Include="gl_Duplicator.hpp" />
+    <ClInclude Include="gl_Scene.hpp" />
     <ClInclude Include="gl_Shape.hpp" />
+    <ClInclude Include="gl_ShapeGroup.hpp" />
     <ClInclude Include="gl_Window.hpp" />
     <ClInclude Include="render.hpp" />
   </ItemGroup>

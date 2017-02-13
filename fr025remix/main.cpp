@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	const char * musicPath = "song.wav";
+	const char * musicPath = "wayfinder - fr-025 (single edit).wav";
 	const char * winTitle = "fr-025 remix";
 	bool winFullscreen = false;
 	int winWidth = 1280;

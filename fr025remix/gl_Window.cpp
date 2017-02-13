@@ -39,7 +39,12 @@ namespace gl
 
 	bool Window::LoadMusic(const std::string & musicPath)
 	{
-		return m_music.openFromFile(musicPath);
+		bool loadSuccessful = m_buffer.loadFromFile(musicPath);
+		if (loadSuccessful)
+			m_sound.setBuffer(m_buffer);
+		return loadSuccessful;
+
+		//return m_music.openFromFile(musicPath);
 	}
 
 	void Window::Run(void)
@@ -60,8 +65,10 @@ namespace gl
 		glutKeyboardFunc(gl::handleKeypress);
 		glutReshapeFunc(gl::handleResize);
 
-		if (m_music.getDuration().asSeconds() > 0)
-			m_music.play();
+		/*if (m_music.getDuration().asSeconds() > 0)
+			m_music.play();*/
+
+		m_sound.play();
 
 		// Start the main loop. glutMainLoop doesn't return.
 		glutMainLoop();

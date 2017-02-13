@@ -34,7 +34,9 @@ namespace gl
 		int m_height;
 		char m_title[256];
 
-		sf::Music m_music;
+		//sf::Music m_music;
+		sf::SoundBuffer m_buffer;
+		sf::Sound m_sound;
 		ChronoClock m_clock;
 	};
 }
