@@ -1,5 +1,13 @@
 #include "gl_Window.hpp"
 
+#include "obj.hpp"
+#include <vector>
+
+std::vector<obj::Object> g_objects;
+std::vector<obj::Property3f> g_vertices;
+std::vector<obj::Property3f> g_textures;
+std::vector<obj::Property3f> g_normals;
+
 int main(void)
 {
 	const char * musicPath = "wayfinder - fr-025 (single edit).wav";
@@ -14,11 +22,13 @@ int main(void)
 	gl::Window::askForResolution(winFullscreen, winWidth, winHeight);
 #endif // !_DEBUG
 
+	obj::objParse("test.obj", g_objects, g_vertices, g_textures, g_normals);
+
 	gl::Window &winInstance = gl::Window::getInstance();
 
 	winInstance.Setup(winTitle, winFullscreen, winWidth, winHeight);
-	if (winInstance.LoadMusic(musicPath))
-		winInstance.Run();
+	//if (winInstance.LoadMusic(musicPath))
+	winInstance.Run();
 
 	// This return is supposed to be unreachable.
 	// Running instance of OpenGLWindow runs in a infinite loop.

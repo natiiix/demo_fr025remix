@@ -122,6 +122,7 @@
     <ClCompile Include="gl_Animation.cpp" />
     <ClCompile Include="gl_base.cpp" />
     <ClCompile Include="gl_Duplicator.cpp" />
+    <ClCompile Include="obj.cpp" />
     <ClCompile Include="gl_Scene.cpp" />
     <ClCompile Include="gl_ShapeGroup.cpp" />
     <ClCompile Include="main.cpp" />
@@ -134,6 +135,7 @@
     <ClInclude Include="gl_Animation.hpp" />
     <ClInclude Include="gl_base.hpp" />
     <ClInclude Include="gl_Duplicator.hpp" />
+    <ClInclude Include="obj.hpp" />
     <ClInclude Include="gl_Scene.hpp" />
     <ClInclude Include="gl_Shape.hpp" />
     <ClInclude Include="gl_ShapeGroup.hpp" />
