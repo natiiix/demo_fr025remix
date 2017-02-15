@@ -1,9 +1,4 @@
-#include "gl_base.hpp"
-#include "gl_Window.hpp"
-#include "render.hpp"
-
-#include <GL\glut.h>
-#include <iostream>
+#include "gl.hpp"
 
 #define KEY_ESCAPE 27
 

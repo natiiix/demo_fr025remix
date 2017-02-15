@@ -1,9 +1,4 @@
 #include "gl_Window.hpp"
-#include "gl_base.hpp"
-
-#include <GL\glut.h>
-#include <iostream>
-#include <string>
 
 namespace gl
 {

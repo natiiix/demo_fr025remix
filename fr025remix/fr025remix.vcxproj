@@ -120,7 +120,7 @@
   <ItemGroup>
     <ClCompile Include="ChronoClock.cpp" />
     <ClCompile Include="gl_Animation.cpp" />
-    <ClCompile Include="gl_base.cpp" />
+    <ClCompile Include="gl.cpp" />
     <ClCompile Include="gl_Duplicator.cpp" />
     <ClCompile Include="obj.cpp" />
     <ClCompile Include="gl_Scene.cpp" />
@@ -128,19 +128,29 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="gl_Shape.cpp" />
     <ClCompile Include="gl_Window.cpp" />
+    <ClCompile Include="obj_Face.cpp" />
+    <ClCompile Include="obj_Object.cpp" />
+    <ClCompile Include="obj_Property3f.cpp" />
+    <ClCompile Include="obj_VertexSet.cpp" />
     <ClCompile Include="render.cpp" />
+    <ClCompile Include="str.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChronoClock.hpp" />
     <ClInclude Include="gl_Animation.hpp" />
-    <ClInclude Include="gl_base.hpp" />
+    <ClInclude Include="gl.hpp" />
     <ClInclude Include="gl_Duplicator.hpp" />
     <ClInclude Include="obj.hpp" />
     <ClInclude Include="gl_Scene.hpp" />
     <ClInclude Include="gl_Shape.hpp" />
     <ClInclude Include="gl_ShapeGroup.hpp" />
     <ClInclude Include="gl_Window.hpp" />
+    <ClInclude Include="obj_Face.hpp" />
+    <ClInclude Include="obj_Object.hpp" />
+    <ClInclude Include="obj_Property3f.hpp" />
+    <ClInclude Include="obj_VertexSet.hpp" />
     <ClInclude Include="render.hpp" />
+    <ClInclude Include="str.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
